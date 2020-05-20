@@ -33,9 +33,10 @@ int main() {
     sockClient = socket(AF_INET, SOCK_STREAM, 0);
 
     //Define the address that wants to connect to (Server's)
-    addrServer.sin_addr.S_un.S_addr = inet_addr("68.199.79.123"); //Target's IP
+    //To Do: Add IP here
+    addrServer.sin_addr.S_un.S_addr = inet_addr(""); //Target's IP
     addrServer.sin_family = AF_INET;                          //IPV4
-    addrServer.sin_port = htons(2333);
+    addrServer.sin_port = htons(); //Target's port
 
     while (true) {
         try
