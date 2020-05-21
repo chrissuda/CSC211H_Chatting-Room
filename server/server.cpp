@@ -11,7 +11,6 @@
 #pragma comment(lib,"ws2_32.lib")
 using namespace std;
 
-void putInRoom(SOCKET sockClient);
 
 int  main()
 {
@@ -101,10 +100,6 @@ int  main()
     return 0;
 }
 
-void putInRoom(SOCKET sockClient) {
-    
-    
-}
 
 
 
