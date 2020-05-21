@@ -30,7 +30,7 @@ void Client::recvFromClient() {
             //Loop over a *SockClients vector to send back information to different clients
             for (int i = 0;i<(SockClients->size());i++) {
                 if (i !=index) {
-                    sendToClient(SockClients->at(i),i);
+                    sendToClient(SockClients->at(i));
                 }
             }
         }
@@ -91,8 +91,8 @@ void Client::check() {
    
 };
 
-void Client::sendToClient(SOCKET sockClient,int i) {
-    string ch = allname->at(i) + ":";
+void Client::sendToClient(SOCKET sockClient) {
+    string ch = allname->at(index) + ":";
     ch += sendBuf;
     send(sockClient,ch.c_str(), 100, 0);
 };
