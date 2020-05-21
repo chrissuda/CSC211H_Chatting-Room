@@ -38,7 +38,7 @@ class Client: public ClientParent {
     void initialize();
     void check();
     void recvFromClient();
-    void sendToClient(SOCKET sockClient,int i);
+    void sendToClient(SOCKET sockClient);
     void sendToClient(string word,int size); //send to self-client by default
 };
 
